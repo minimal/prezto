@@ -21,7 +21,7 @@ function h () {
 }
 
 function c () {
-    _cd ~/code/$1;
+    cd ~/code/$1;
 }
 
 if [ "$kernel" = 'Darwin' ]; then
