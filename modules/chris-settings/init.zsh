@@ -2,6 +2,7 @@
 kernel=`uname`
 
 setopt interactivecomments
+REPORTTIME=10  # if cmd takes longer than n seconds report the time
 
 # awesome!! e.g. $ git <up-arrow> => $ git log
 bindkey "^[[A" history-beginning-search-backward
