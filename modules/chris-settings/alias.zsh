@@ -4,8 +4,8 @@
 if [ "$kernel" = 'Linux' ]; then
     # alias ls='ls --color=auto'
 elif [ "$kernel" = 'Darwin' ]; then
-    alias ls='gls --color=auto'
-    alias du='gdu'
+    # alias ls='gls --color=auto'
+    # alias du='gdu'
     alias sort='gsort'
 fi
 

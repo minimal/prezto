@@ -4,12 +4,12 @@ kernel=`uname`
 setopt interactivecomments
 REPORTTIME=10  # if cmd takes longer than n seconds report the time
 
-# awesome!! e.g. $ git <up-arrow> => $ git log
-bindkey "^[[A" history-beginning-search-backward
-bindkey "^[[B" history-beginning-search-forward
-# some keyboards use this:
-bindkey "^[OA" history-beginning-search-backward
-bindkey "^[OB" history-beginning-search-forward
+# # awesome!! e.g. $ git <up-arrow> => $ git log
+# bindkey "^[[A" history-beginning-search-backward
+# bindkey "^[[B" history-beginning-search-forward
+# # some keyboards use this:
+# bindkey "^[OA" history-beginning-search-backward
+# bindkey "^[OB" history-beginning-search-forward
 
 
 # functions
