@@ -96,6 +96,8 @@ alias websharecgi='python -m CGIHTTPServer 8001'
 # open in running emacs from  cmdline w/o waiting
 if [ "$kernel" = 'Darwin' ]; then
     alias emacsclient="/usr/local/Cellar/emacs/24.3/bin/emacsclient"
+elif [ "$kernel" = 'Linux' ]; then
+    alias emacsclient="emacsclient -s /tmp/emacs1000/server"
 fi
 
 
