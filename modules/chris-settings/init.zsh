@@ -39,6 +39,9 @@ else
     }
 fi
 
+#virtualenv setup
+export WORKON_HOME="$HOME/Envs"
+source /usr/local/bin/virtualenvwrapper.sh
 
 # Source module files.
 source "${0:h}/alias.zsh"
