@@ -33,6 +33,10 @@ function prompt_sorin_cust_precmd {
   if (( $+functions[git-info] )); then
     git-info
   fi
+
+  if (( $+functions[python-info] )); then
+    python-info
+  fi
 }
 
 function prompt_sorin_cust_setup {
@@ -81,7 +85,10 @@ function prompt_sorin_cust_setup {
   fi
   __smiley="%(?:%F{green}✓:%F{red}✘%f)"  # tick or cross
 
-  PROMPT='%B%F${red}%n%f${prompt_host} %B%F{blue}❯ %F{cyan}${_prompt_sorin_cust_pwd}
+  # Set python-info parameters.
+  zstyle ':prezto:module:python:info:virtualenv' format '%F(%F{green}%v%F)'
+
+  PROMPT='%B%F${red}%n%f${prompt_host} $python_info[virtualenv] %B%F{blue}❯ %F{cyan}${_prompt_sorin_cust_pwd}
 ${__smiley}%f${git_info:+${(e)git_info[prompt]}}%(!. %B%F{red}#%f%b.) [%T]${editor_info[keymap]} '
   RPROMPT='${editor_info[overwrite]}%(?:: %F{red}⏎%f)${VIM:+" %B%F{green}V%f%b"}${git_info[rprompt]}'
   SPROMPT='zsh: correct %F{red}%R%f to %F{green}%r%f [nyae]? '

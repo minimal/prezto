@@ -6,6 +6,7 @@
 #   Sebastian Wiesner <lunaryorn@googlemail.com>
 #
 
+return
 # Load manually installed pyenv into the shell session.
 if [[ -s "$HOME/.pyenv/bin/pyenv" ]]; then
   path=("$HOME/.pyenv/bin" $path)
@@ -33,8 +34,9 @@ fi
 
 # Load virtualenvwrapper into the shell session.
 if (( $+commands[virtualenvwrapper_lazy.sh] )); then
+    echo hello
   # Set the directory where virtual environments are stored.
-  export WORKON_HOME="$HOME/.virtualenvs"
+  export WORKON_HOME="$HOME/Envs"
 
   # Disable the virtualenv prompt.
   VIRTUAL_ENV_DISABLE_PROMPT=1
@@ -47,4 +49,3 @@ fi
 #
 
 alias py='python'
-

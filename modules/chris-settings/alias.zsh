@@ -57,7 +57,7 @@ fi
 alias rmpyc='rm **/*pyc'
 alias pyclean='rmpyc'
 alias pipreqs='pip install -r requirements.txt'
-
+alias pipwheel='pip install --use-wheel'
 
 alias dud='du --max-depth=1 -h'
 alias duds='du -h --max-depth=1 . | sort -h'
@@ -95,10 +95,15 @@ alias websharecgi='python -m CGIHTTPServer 8001'
 
 # open in running emacs from  cmdline w/o waiting
 if [ "$kernel" = 'Darwin' ]; then
-    alias emacsclient="/usr/local/Cellar/emacs/24.3/bin/emacsclient"
+    alias emacsclient="/usr/local/Cellar/emacs/HEAD/bin/emacsclient"
+    alias mdfindname="mdfind -name"
 elif [ "$kernel" = 'Linux' ]; then
     alias emacsclient="emacsclient -s /tmp/emacs1000/server"
 fi
 
 
 alias e="emacsclient --no-wait"
+
+# ruby
+alias bi="bundle install --jobs 4 --binstubs .bundle/bin"
+alias be="bundle exec"

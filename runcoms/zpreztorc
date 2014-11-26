@@ -36,6 +36,7 @@ zstyle ':prezto:load' pmodule \
   'git'\
   'osx' \
   'tmux' \
+  'python' \
   'chris-settings' \
   'syntax-highlighting' \
   'history-substring-search' \

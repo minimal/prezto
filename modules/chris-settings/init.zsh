@@ -26,10 +26,10 @@ function c () {
 }
 
 if [ "$kernel" = 'Darwin' ]; then
-    export GOROOT=/usr/local/Cellar/go/1.0.3/
-    export PYTHONPATH=$(brew --prefix)/lib/python2.7/site-packages
+    # export GOROOT=/usr/local/Cellar/go/1.0.3/
+    # export PYTHONPATH=$(brew --prefix)/lib/python2.7/site-packages
     export PATH=/usr/local/tranquil/bin:$PATH
-
+    export PATH="$HOME/Library/Haskell/bin:$PATH"
     function grep-port {
         lsof -n -i4TCP:$1 | grep LISTEN
     }
@@ -42,6 +42,9 @@ fi
 #virtualenv setup
 export WORKON_HOME="$HOME/Envs"
 source /usr/local/bin/virtualenvwrapper.sh
+# Disable the virtualenv prompt.
+VIRTUAL_ENV_DISABLE_PROMPT=1
 
 # Source module files.
 source "${0:h}/alias.zsh"
+source "${0:h}/exports.zsh"
