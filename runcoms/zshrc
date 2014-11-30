@@ -11,8 +11,6 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
-
-
 export PERL_LOCAL_LIB_ROOT="/Users/chris/perl5:$PERL_LOCAL_LIB_ROOT";
 export PERL_MB_OPT="--install_base "/Users/chris/perl5"";
 export PERL_MM_OPT="INSTALL_BASE=/Users/chris/perl5";
