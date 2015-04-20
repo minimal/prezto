@@ -48,3 +48,11 @@ VIRTUAL_ENV_DISABLE_PROMPT=1
 # Source module files.
 source "${0:h}/alias.zsh"
 source "${0:h}/exports.zsh"
+
+# nix
+if [ -e /Users/chris/.nix-profile/etc/profile.d/nix.sh ]; then
+    . /Users/chris/.nix-profile/etc/profile.d/nix.sh; fi
+# added by Nix installer
+export NIX_PATH=/Users/chris/code/vendor/nixpkgs:nixpkgs=/Users/chris/code/vendor/nixpkgs
+
+source /usr/local/opt/autoenv/activate.sh

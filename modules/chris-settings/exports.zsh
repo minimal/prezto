@@ -25,3 +25,13 @@ export GHC_DOT_APP="/Applications/ghc-7.8.3.app"
 if [ -d "$GHC_DOT_APP" ]; then
     export PATH="${HOME}/.cabal/bin:${GHC_DOT_APP}/Contents/bin:${PATH}"
 fi
+
+# fast lein http://swannodette.github.io/2014/12/22/waitin/
+LEIN_FAST_TRAMPOLINE=y
+export LEIN_FAST_TRAMPOLINE
+# alias cljsbuild="lein trampoline cljsbuild $@"  # no worky!
+
+function cljsbuild () {
+    lein trampoline cljsbuild $@
+}
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/
