@@ -46,5 +46,5 @@ source /usr/local/bin/virtualenvwrapper.sh
 VIRTUAL_ENV_DISABLE_PROMPT=1
 
 # Source module files.
-source "${0:h}/alias.zsh"
 source "${0:h}/exports.zsh"
+source "${0:h}/alias.zsh"
