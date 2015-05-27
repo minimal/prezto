@@ -2,9 +2,6 @@
 # export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
 # export VIRTUALENV_DISTRIBUTE=true
 export PROJECT_HOME=~/code
-export WHEELHOUSE=~/wheelhouse
-export PIP_USE_WHEEL=true
-# export PIP_FIND_LINKS=$WHEELHOUSE
 
 # seems to break rubybuilds
 # export C_INCLUDE_PATH=/usr/local/Cellar/libxml2/2.9.1/include/libxml2:$C_INCLUDE_PATH
@@ -25,3 +22,12 @@ export GHC_DOT_APP="/Applications/ghc-7.8.3.app"
 if [ -d "$GHC_DOT_APP" ]; then
     export PATH="${HOME}/.cabal/bin:${GHC_DOT_APP}/Contents/bin:${PATH}"
 fi
+
+if [[ -s "${ZDOTDIR:-$HOME}/.secrets" ]]; then
+  source "${ZDOTDIR:-$HOME}/.secrets"
+fi
+
+. /Users/chrismcdevitt/.nix-profile/etc/profile.d/nix.sh
+export NIX_PATH=nixpkgs=~/nixpkgs
+
+export PIP_REQUIRE_VIRTUALENV=true

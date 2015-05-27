@@ -22,7 +22,7 @@ export VISUAL='nano'
 export PAGER='less'
 
 export EDITOR='emacsclient --no-wait'
-export VISUAL='e'
+export VISUAL='emacsclient --no-wait'
 
 #
 # Language
