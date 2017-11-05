@@ -45,6 +45,7 @@ fi
 if (cmd_exists ag); then
     export GREPPER='ag'
     alias agpy='ag -G "\.py$"'
+    alias agclj='ag -G "\.clj[sc]?$"'
     alias p-ag="ps ax | ag"
 
 elif (cmd_exists ack); then
