@@ -34,5 +34,4 @@ fi
 # export NIX_PATH=nixpkgs=~/nixpkgs
 
 export PIP_REQUIRE_VIRTUALENV=true
-
-export HOMEBREW_CASK_OPTS="--caskroom=/opt/homebrew-cask/Caskroom"
+export GPG_TTY=$(tty)
