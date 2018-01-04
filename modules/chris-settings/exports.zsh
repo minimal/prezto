@@ -35,3 +35,6 @@ fi
 
 export PIP_REQUIRE_VIRTUALENV=true
 export GPG_TTY=$(tty)
+
+export FZF_DEFAULT_COMMAND='fd --type f'
+export FZF_DEFAULT_OPTS='--preview "fzfprev {}"'
