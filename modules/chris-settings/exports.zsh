@@ -17,24 +17,18 @@ CAML_LD_LIBRARY_PATH="$HOME/.opam/system/lib/stublibs:/usr/local/lib/ocaml/stubl
 PERL5LIB="$HOME/.opam/system/lib/perl5:$HOME/perl5/lib/perl5:"; export PERL5LIB;
 OCAML_TOPLEVEL_PATH="$HOME/.opam/system/lib/toplevel"; export OCAML_TOPLEVEL_PATH;
 MANPATH="$HOME/.opam/system/man:"; export MANPATH;
-PATH="$HOME/.opam/system/bin:$HOME/perl5/bin:.bundle/bin:$HOME/.rbenv/shims:$HOME/Library/Haskell/bin:/usr/local/tranquil/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/bin"; export PATH;
+
 export PATH="$HOME/.local/bin:$PATH"
-
-
-# export GHC_DOT_APP="/Applications/ghc-7.8.3.app"
-# if [ -d "$GHC_DOT_APP" ]; then
-#     export PATH="${HOME}/.cabal/bin:${GHC_DOT_APP}/Contents/bin:${PATH}"
-# fi
+export PATH=$PATH:$HOME/Downloads/confluent-4.0.0/bin/
 
 if [[ -s "${ZDOTDIR:-$HOME}/.secrets" ]]; then
   source "${ZDOTDIR:-$HOME}/.secrets"
 fi
-
-# . ~/.nix-profile/etc/profile.d/nix.sh
-# export NIX_PATH=nixpkgs=~/nixpkgs
 
 export PIP_REQUIRE_VIRTUALENV=true
 export GPG_TTY=$(tty)
 
 export FZF_DEFAULT_COMMAND='fd --type f'
 export FZF_DEFAULT_OPTS='--preview "fzfprev {}"'
+
+CONFLUENT_HOME=/Users/cmcdevitt/Downloads/confluent-4.0.0/
