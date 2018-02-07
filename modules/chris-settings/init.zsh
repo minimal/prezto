@@ -39,11 +39,7 @@ else
     }
 fi
 
-#virtualenv setup
-export WORKON_HOME="$HOME/Envs"
-source /usr/local/bin/virtualenvwrapper.sh
-# Disable the virtualenv prompt.
-VIRTUAL_ENV_DISABLE_PROMPT=1
+
 
 autoload -U +X bashcompinit && bashcompinit
 export PATH="$HOME/.local/bin:$PATH"
@@ -55,3 +51,10 @@ source "${0:h}/alias.zsh"
 source "${0:h}/zbell.zsh"
 
 source /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
+
+# uncomment to reactivate
+# #virtualenv setup
+export WORKON_HOME="$HOME/Envs"
+source /usr/local/bin/virtualenvwrapper.sh
+# Disable the virtualenv prompt.
+VIRTUAL_ENV_DISABLE_PROMPT=1

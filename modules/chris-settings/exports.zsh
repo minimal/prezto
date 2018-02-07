@@ -1,6 +1,8 @@
 # pip and virtualenvwrapper
 # export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
 # export VIRTUALENV_DISTRIBUTE=true
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
+
 export PROJECT_HOME=~/code
 
 # seems to break rubybuilds
