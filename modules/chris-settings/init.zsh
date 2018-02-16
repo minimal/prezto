@@ -50,8 +50,6 @@ source "${0:h}/exports.zsh"
 source "${0:h}/alias.zsh"
 source "${0:h}/zbell.zsh"
 
-source /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
-
 # uncomment to reactivate
 # #virtualenv setup
 export WORKON_HOME="$HOME/Envs"
