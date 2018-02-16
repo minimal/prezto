@@ -11,17 +11,9 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
-export PERL_LOCAL_LIB_ROOT="$HOME/perl5:$PERL_LOCAL_LIB_ROOT";
-export PERL_MB_OPT="--install_base "$HOME/perl5"";
-export PERL_MM_OPT="INSTALL_BASE=$HOME/perl5";
-export PERL5LIB="$HOME/perl5/lib/perl5:$PERL5LIB";
-export PATH="$HOME/perl5/bin:$PATH";
 
 export DISPLAY=1  # fix ls++ sizes
 
 test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
-
-# OPAM configuration
-. /Users/christophermcdevitt/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
 # if [ -e /Users/christophermcdevitt/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/christophermcdevitt/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
