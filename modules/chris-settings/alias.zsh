@@ -17,17 +17,34 @@ alias ldot='ll -d .*'
 alias ltr='ll -tr'
 #alias ls='ls -G' # osx/bsd
 
-# ls++ http://github.com/trapd00r/ls--
-if (cmd_exists ls++); then
-    if [ "$kernel" = 'Darwin' ]; then
-        alias ll='  LC_ALL=en_US.UTF-8 LANG=en ls++ '
-    else
-        alias ll='ls++'
-    fi
-    alias lla='ll -a'
-    alias llo='ll --potsf'
+if (cmd_exists k); then
+    alias kk='k -h'
 fi
 
+if (cmd_exists fzf); then
+	if (cmd_exists fd); then
+		alias cdfzf='cd $(fd -td . ~ | fzf)'
+	fi
+fi
+
+
+if (cmd_exists exa); then
+    alias ll='exa -l --colour-scale'
+    alias ltr='ll -lrsold'
+	alias lla='ll -a'
+	alias llg='ll --git'
+# ls++ http://github.com/trapd00r/ls--
+else
+    if (cmd_exists ls++); then
+	if [ "$kernel" = 'Darwin' ]; then
+            alias ll='  LC_ALL=en_US.UTF-8 LANG=en ls++ '
+	else
+            alias ll='ls++'
+	fi
+	alias lla='ll -a'
+	alias llo='ll --potsf'
+    fi
+fi
 alias rdirs='dirs -v'
 
 alias grep='grep --color=auto'
