@@ -52,7 +52,8 @@ source "${0:h}/zbell.zsh"
 # uncomment to reactivate
 # #virtualenv setup
 export WORKON_HOME="$HOME/Envs"
-source /usr/local/bin/virtualenvwrapper.sh
+# source /usr/local/bin/virtualenvwrapper.sh
+source virtualenvwrapper.sh
 # Disable the virtualenv prompt.
 VIRTUAL_ENV_DISABLE_PROMPT=1
 

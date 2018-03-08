@@ -1,7 +1,7 @@
 # pip and virtualenvwrapper
 # export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
 # export VIRTUALENV_DISTRIBUTE=true
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
+# export VIRTUALENVWRAPPER_PYTHON=/Users/cmcdevitt/.nix-profile/bin/python
 
 export PROJECT_HOME=~/code
 
