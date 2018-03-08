@@ -46,7 +46,6 @@ export PATH="$HOME/.local/bin:$PATH"
 eval "$(stack --bash-completion-script "$(which stack)")"
 
 # Source module files.
-source "${0:h}/exports.zsh"
 source "${0:h}/alias.zsh"
 source "${0:h}/zbell.zsh"
 
